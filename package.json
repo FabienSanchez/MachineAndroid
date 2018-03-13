@@ -1,9 +1,9 @@
 {
-  "name": "helloworld",
-  "displayName": "HelloCordova",
+  "name": "Machine",
+  "displayName": "Parc Machine",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "author": "Fabien Sanchez",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,16 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0",
     "cordova-android": "^6.4.0",
+    "cordova-browser": "^5.0.3",
+    "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-whitelist": "^1.3.3",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-js-toggle-button": "^1.2.2",
+    "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.8.11"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -64,10 +70,12 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-geolocation": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   }
 }
